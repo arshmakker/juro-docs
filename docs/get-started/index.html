@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Juro MCP Server Documentation</title>
+    <meta name="description" content="Quick start guide for Juro MCP Server. Get up and running with automated compliance scanning in minutes.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/">
+                        <span class="logo-text">Juro</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="/docs/get-started/" class="nav-link active">Get Started</a>
+                    <a href="/docs/scan-monitor/" class="nav-link">Scan & Monitor</a>
+                    <a href="/docs/api/" class="nav-link">API</a>
+                    <a href="/docs/mcp/" class="nav-link">MCP Integration</a>
+                    <a href="/docs/business-value/" class="nav-link">Business Value</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Get Started with Juro MCP Server</h1>
+                <p class="page-subtitle">Get up and running with automated compliance scanning in under 5 minutes</p>
+            </div>
+
+            <!-- Quick Start Section -->
+            <section class="content-section">
+                <h2>🚀 Quick Start (5 Minutes)</h2>
+                
+                <div class="step-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Install Juro MCP Server</h3>
+                        <div class="code-block">
+                            <pre><code>npm install -g juro-mcp-server</code></pre>
+                        </div>
+                        <p>Install the Juro MCP Server globally on your system</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Start the Server</h3>
+                        <div class="code-block">
+                            <pre><code>juro-mcp-server start</code></pre>
+                        </div>
+                        <p>Launch the MCP server on your local machine</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Connect Your AI Tool</h3>
+                        <div class="code-block">
+                            <pre><code># In Claude/ChatGPT, add MCP connection
+# Server: localhost:3000
+# Tools: compliance-scan, rule-management</code></pre>
+                        </div>
+                        <p>Connect Claude, ChatGPT, or any MCP-compatible tool</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Start Scanning</h3>
+                        <div class="code-block">
+                            <pre><code># Ask your AI tool:
+"Scan my project directory for GDPR compliance issues"</code></pre>
+                        </div>
+                        <p>Begin automated compliance scanning immediately</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prerequisites Section -->
+            <section class="content-section">
+                <h2>📋 Prerequisites</h2>
+                <ul class="prerequisites-list">
+                    <li><strong>Node.js 18+</strong> - Modern JavaScript runtime</li>
+                    <li><strong>Git</strong> - Version control system</li>
+                    <li><strong>MCP-Compatible AI Tool</strong> - Claude, ChatGPT, or similar</li>
+                    <li><strong>Project Directory</strong> - Code you want to scan</li>
+                </ul>
+            </section>
+
+            <!-- Installation Options Section -->
+            <section class="content-section">
+                <h2>🔧 Installation Options</h2>
+                
+                <div class="installation-tabs">
+                    <div class="tab active" data-tab="npm">npm (Recommended)</div>
+                    <div class="tab" data-tab="docker">Docker</div>
+                    <div class="tab" data-tab="source">Source Code</div>
+                </div>
+                
+                <div class="tab-content active" id="npm">
+                    <h3>npm Installation</h3>
+                    <div class="code-block">
+                        <pre><code># Install globally
+npm install -g juro-mcp-server
+
+# Verify installation
+juro-mcp-server --version
+
+# Start server
+juro-mcp-server start</code></pre>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="docker">
+                    <h3>Docker Installation</h3>
+                    <div class="code-block">
+                        <pre><code># Pull the image
+docker pull juro/mcp-server:latest
+
+# Run the container
+docker run -p 3000:3000 -v $(pwd):/workspace juro/mcp-server:latest</code></pre>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="source">
+                    <h3>Source Code Installation</h3>
+                    <div class="code-block">
+                        <pre><code># Clone repository
+git clone https://github.com/arshmakker/juro.mcp.server.git
+
+# Install dependencies
+cd juro.mcp.server
+npm install
+
+# Build the project
+npm run build
+
+# Start the server
+npm start</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Configuration Section -->
+            <section class="content-section">
+                <h2>⚙️ Configuration</h2>
+                
+                <div class="config-grid">
+                    <div class="config-item">
+                        <h3>Environment Variables</h3>
+                        <div class="code-block">
+                            <pre><code># Server Configuration
+MCP_PORT=3000
+HTTP_PORT=8080
+LOG_LEVEL=info
+
+# Compliance Rules
+JURO_RULE_PACKS_PATH=./rules
+COMPLIANCE_LEVEL=strict</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="config-item">
+                        <h3>Configuration File</h3>
+                        <div class="code-block">
+                            <pre><code># juro.config.js
+module.exports = {
+  server: {
+    mcpPort: 3000,
+    httpPort: 8080,
+    logLevel: 'info'
+  },
+  compliance: {
+    rulePacks: ['./rules'],
+    level: 'strict',
+    autoScan: true
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Steps Section -->
+            <section class="content-section">
+                <h2>🎯 Next Steps</h2>
+                
+                <div class="next-steps-grid">
+                    <a href="/docs/scan-monitor/" class="next-step-card">
+                        <h3>�� Learn Scanning & Monitoring</h3>
+                        <p>Understand how to scan files, monitor compliance, and interpret results</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    
+                    <a href="/docs/api/" class="next-step-card">
+                        <h3>🔌 Explore the API</h3>
+                        <p>Integrate Juro into your existing tools and workflows</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    
+                    <a href="/docs/mcp/" class="next-step-card">
+                        <h3>🤖 MCP Integration</h3>
+                        <p>Connect with Claude, ChatGPT, and other AI assistants</p>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Product</h4>
+                    <a href="/docs/get-started/" class="footer-link">Get Started</a>
+                    <a href="/docs/scan-monitor/" class="footer-link">Scan & Monitor</a>
+                    <a href="/docs/api/" class="footer-link">API Reference</a>
+                    <a href="/docs/mcp/" class="footer-link">MCP Integration</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Business</h4>
+                    <a href="/docs/business-value/" class="footer-link">ROI Calculator</a>
+                    <a href="/docs/" class="footer-link">Case Studies</a>
+                    <a href="/docs/" class="footer-link">Pricing</a>
+                    <a href="/docs/" class="footer-link">Contact Sales</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Juro. All rights reserved. 
+                    <a href="/docs/">License</a> | 
+                    <a href="/docs/">Privacy</a> | 
+                    <a href="/docs/">Terms</a>
+                    Built with ❤️ by the Juro Team.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
