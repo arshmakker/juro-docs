@@ -84,3 +84,4 @@ Get up and running with Juro MCP Server in under 5 minutes:
 **Ready to transform your compliance workflow?** [Start with our hosted service →](./deployment/hosted.md)
 
 *Built with ❤️ by the Juro Team*
+# Migration Complete
