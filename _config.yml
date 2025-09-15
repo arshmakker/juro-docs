@@ -1,0 +1,50 @@
+title: Juro MCP Server Documentation
+description: Professional compliance scanning via Model Context Protocol
+baseurl: ""
+url: "https://juro-docs.vercel.app"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - node_modules
+  - src
+  - tests
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - jest.config.js
+  - .eslintrc.js
+  - .gitignore
+  - README.md
+  - Dockerfile
+  - railway.json
+  - Procfile
+  - env.example
+  - dist
+  - coverage
+  - scripts
+  - examples
+  - docker

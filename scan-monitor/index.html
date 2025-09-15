@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan & Monitor - Juro MCP Server Documentation</title>
+    <meta name="description" content="Learn how to scan files, monitor compliance, and interpret results with Juro MCP Server.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/">
+                        <span class="logo-text">Juro</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="/docs/get-started/" class="nav-link">Get Started</a>
+                    <a href="/docs/scan-monitor/" class="nav-link active">Scan & Monitor</a>
+                    <a href="/docs/api/" class="nav-link">API</a>
+                    <a href="/docs/mcp/" class="nav-link">MCP Integration</a>
+                    <a href="/docs/business-value/" class="nav-link">Business Value</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Scan & Monitor</h1>
+                <p class="page-subtitle">Core functionality for automated compliance scanning and continuous monitoring</p>
+            </div>
+
+            <!-- Overview Section -->
+            <section class="content-section">
+                <h2>🔍 Overview</h2>
+                <p>Juro MCP Server provides powerful scanning and monitoring capabilities to automatically detect compliance violations, security issues, and regulatory gaps in your codebase. Scan individual files, entire directories, or set up continuous monitoring for real-time compliance assurance.</p>
+            </section>
+
+            <!-- Scanning Methods Section -->
+            <section class="content-section">
+                <h2>📁 Scanning Methods</h2>
+                
+                <div class="scanning-methods">
+                    <div class="method-card">
+                        <h3>🔍 File Scanning</h3>
+                        <p>Scan individual files for specific compliance issues</p>
+                        <div class="code-block">
+                            <pre><code># Scan a single file
+"Scan this file for GDPR compliance issues"
+
+# Scan multiple files
+"Check these files for DORA compliance"</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <h3>📂 Directory Scanning</h3>
+                        <p>Scan entire directories or projects recursively</p>
+                        <div class="code-block">
+                            <pre><code># Scan entire project
+"Scan my project directory for compliance issues"
+
+# Scan specific folders
+"Check the src/ folder for GDPR violations"</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <h3>🔄 Continuous Monitoring</h3>
+                        <p>Set up real-time monitoring for ongoing compliance</p>
+                        <div class="code-block">
+                            <pre><code># Enable monitoring
+"Start monitoring this directory for compliance"
+
+# Check monitoring status
+"What compliance issues were found recently?"</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compliance Rules Section -->
+            <section class="content-section">
+                <h2>📋 Compliance Rules</h2>
+                
+                <div class="rules-overview">
+                    <h3>Built-in Rule Packs</h3>
+                    <div class="rule-packs">
+                        <div class="rule-pack">
+                            <h4>🔒 GDPR Rules</h4>
+                            <ul>
+                                <li>Personal data handling detection</li>
+                                <li>Consent management validation</li>
+                                <li>Data retention policy checks</li>
+                                <li>Right to be forgotten implementation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-pack">
+                            <h4>🏦 DORA Rules</h4>
+                            <ul>
+                                <li>ICT risk management validation</li>
+                                <li>Digital resilience assessment</li>
+                                <li>Incident reporting compliance</li>
+                                <li>Third-party risk evaluation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-pack">
+                            <h4>📱 MiCA Rules</h4>
+                            <ul>
+                                <li>Crypto asset compliance checks</li>
+                                <li>Market abuse prevention</li>
+                                <li>Investor protection validation</li>
+                                <li>Regulatory reporting requirements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scan Results Section -->
+            <section class="content-section">
+                <h2>📊 Understanding Scan Results</h2>
+                
+                <div class="results-explanation">
+                    <h3>Result Categories</h3>
+                    
+                    <div class="result-categories">
+                        <div class="category critical">
+                            <h4>🚨 Critical</h4>
+                            <p>Immediate compliance violations requiring urgent attention</p>
+                            <ul>
+                                <li>GDPR personal data exposure</li>
+                                <li>Missing consent mechanisms</li>
+                                <li>Security vulnerabilities</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="category warning">
+                            <h4>⚠️ Warning</h4>
+                            <p>Potential compliance issues that should be addressed</p>
+                            <ul>
+                                <li>Incomplete data handling</li>
+                                <li>Missing audit trails</li>
+                                <li>Outdated compliance patterns</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="category info">
+                            <h4>ℹ️ Information</h4>
+                            <p>Best practice recommendations and compliance tips</p>
+                            <ul>
+                                <li>Compliance improvements</li>
+                                <li>Security enhancements</li>
+                                <li>Documentation suggestions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Monitoring Section -->
+            <section class="content-section">
+                <h2>📈 Continuous Monitoring</h2>
+                
+                <div class="monitoring-features">
+                    <h3>Real-time Compliance Assurance</h3>
+                    
+                    <div class="feature-grid">
+                        <div class="feature">
+                            <h4>🔄 File Change Detection</h4>
+                            <p>Automatically scan files when they're modified, added, or deleted</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <h4>📊 Compliance Dashboard</h4>
+                            <p>Real-time view of compliance status across your entire project</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <h4>🚨 Alert System</h4>
+                            <p>Immediate notifications when critical compliance issues are detected</p>
+                        </div>
+                        
+                        <div class="feature">
+                            <h4>📈 Trend Analysis</h4>
+                            <p>Track compliance improvements over time with detailed analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Practices Section -->
+            <section class="content-section">
+                <h2>💡 Best Practices</h2>
+                
+                <div class="best-practices">
+                    <div class="practice">
+                        <h3>🎯 Regular Scanning Schedule</h3>
+                        <p>Set up automated scans to run daily or weekly to catch issues early</p>
+                    </div>
+                    
+                    <div class="practice">
+                        <h3>🔍 Comprehensive Coverage</h3>
+                        <p>Scan all relevant directories including source code, configuration files, and documentation</p>
+                    </div>
+                    
+                    <div class="practice">
+                        <h3>📝 Actionable Results</h3>
+                        <p>Address critical issues immediately and create action plans for warnings</p>
+                    </div>
+                    
+                    <div class="practice">
+                        <h3>🔄 Continuous Improvement</h3>
+                        <p>Use scan results to improve your compliance processes and prevent future issues</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Steps Section -->
+            <section class="content-section">
+                <h2>🎯 Next Steps</h2>
+                
+                <div class="next-steps-grid">
+                    <a href="/docs/api/" class="next-step-card">
+                        <h3>🔌 API Reference</h3>
+                        <p>Integrate scanning capabilities into your existing tools and workflows</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    
+                    <a href="/docs/mcp/" class="next-step-card">
+                        <h3>🤖 MCP Integration</h3>
+                        <p>Connect with AI assistants for intelligent compliance scanning</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    
+                    <a href="/docs/gdpr/" class="next-step-card">
+                        <h3>🔒 GDPR Compliance</h3>
+                        <p>Learn specific GDPR scanning rules and best practices</p>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Product</h4>
+                    <a href="/docs/get-started/" class="footer-link">Get Started</a>
+                    <a href="/docs/scan-monitor/" class="footer-link">Scan & Monitor</a>
+                    <a href="/docs/api/" class="footer-link">API Reference</a>
+                    <a href="/docs/mcp/" class="footer-link">MCP Integration</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Business</h4>
+                    <a href="/docs/business-value/" class="footer-link">ROI Calculator</a>
+                    <a href="/docs/" class="footer-link">Case Studies</a>
+                    <a href="/docs/" class="footer-link">Pricing</a>
+                    <a href="/docs/" class="footer-link">Contact Sales</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Juro. All rights reserved. 
+                    <a href="/docs/">License</a> | 
+                    <a href="/docs/">Privacy</a> | 
+                    <a href="/docs/">Terms</a>
+                    Built with ❤️ by the Juro Team.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

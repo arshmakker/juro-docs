@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DORA Compliance - Juro MCP Server Documentation</title>
+    <meta name="description" content="Comprehensive DORA compliance scanning with Juro MCP Server. Ensure digital operational resilience for financial institutions.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/">
+                        <span class="logo-text">Juro</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <a href="/docs/get-started/" class="nav-link">Get Started</a>
+                    <a href="/docs/scan-monitor/" class="nav-link">Scan & Monitor</a>
+                    <a href="/docs/api/" class="nav-link">API</a>
+                    <a href="/docs/mcp/" class="nav-link">MCP Integration</a>
+                    <a href="/docs/business-value/" class="nav-link">Business Value</a>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>🏦 DORA Compliance</h1>
+                <p class="page-subtitle">Digital Operational Resilience Act compliance for financial institutions</p>
+            </div>
+
+            <!-- Overview Section -->
+            <section class="content-section">
+                <h2>📋 DORA Overview</h2>
+                <p>The Digital Operational Resilience Act (DORA) is a comprehensive EU regulation that ensures financial institutions can withstand, respond to, and recover from ICT-related disruptions. Juro MCP Server automatically scans your systems to identify potential DORA compliance gaps and ensure operational resilience.</p>
+            </section>
+
+            <!-- Key Pillars Section -->
+            <section class="content-section">
+                <h2>🏗️ DORA's Five Pillars</h2>
+                
+                <div class="dora-pillars">
+                    <div class="pillar">
+                        <h3>1. ICT Risk Management</h3>
+                        <p>Comprehensive risk management framework for ICT systems</p>
+                        <div class="code-block">
+                            <pre><code># Juro detects:
+- Missing risk assessment procedures
+- Incomplete ICT asset inventories
+- Weak risk mitigation strategies</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <h3>2. ICT Incident Reporting</h3>
+                        <p>Timely reporting and classification of ICT incidents</p>
+                        <div class="code-block">
+                            <pre><code># Juro detects:
+- Missing incident response procedures
+- Inadequate incident classification
+- Delayed reporting mechanisms</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <h3>3. Digital Resilience Testing</h3>
+                        <p>Regular testing of ICT systems and resilience capabilities</p>
+                        <div class="code-block">
+                            <pre><code># Juro detects:
+- Missing testing schedules
+- Incomplete test coverage
+- No resilience validation</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <h3>4. ICT Third-Party Risk</h3>
+                        <p>Risk management for third-party ICT service providers</p>
+                        <div class="code-block">
+                            <pre><code># Juro detects:
+- Missing vendor assessments
+- Incomplete contract reviews
+- Weak oversight mechanisms</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="pillar">
+                        <h3>5. Information Sharing</h3>
+                        <p>Sharing of cyber threat information and intelligence</p>
+                        <div class="code-block">
+                            <pre><code># Juro detects:
+- Missing threat intelligence feeds
+- Incomplete information sharing
+- Weak collaboration networks</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ICT Risk Management Section -->
+            <section class="content-section">
+                <h2>⚠️ ICT Risk Management</h2>
+                
+                <div class="risk-management">
+                    <h3>Risk Assessment & Mitigation</h3>
+                    
+                    <div class="risk-categories">
+                        <div class="risk-category">
+                            <h4>🔒 Cybersecurity Risks</h4>
+                            <ul>
+                                <li>Malware and ransomware threats</li>
+                                <li>Phishing and social engineering</li>
+                                <li>Data breaches and exfiltration</li>
+                                <li>Insider threats and access abuse</li>
+                                <li>Advanced persistent threats (APTs)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="risk-category">
+                            <h4>💻 Technical Risks</h4>
+                            <ul>
+                                <li>System failures and downtime</li>
+                                <li>Data corruption and loss</li>
+                                <li>Performance degradation</li>
+                                <li>Integration failures</li>
+                                <li>Scalability limitations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="risk-category">
+                            <h4>🌐 Operational Risks</h4>
+                            <ul>
+                                <li>Process inefficiencies</li>
+                                <li>Human error and training gaps</li>
+                                <li>Resource constraints</li>
+                                <li>Change management failures</li>
+                                <li>Business continuity gaps</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="risk-category">
+                            <h4>📊 Business Risks</h4>
+                            <ul>
+                                <li>Regulatory non-compliance</li>
+                                <li>Reputational damage</li>
+                                <li>Financial losses</li>
+                                <li>Customer impact</li>
+                                <li>Competitive disadvantage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Incident Response Section -->
+            <section class="content-section">
+                <h2>🚨 ICT Incident Response</h2>
+                
+                <div class="incident-response">
+                    <h3>Incident Classification & Response</h3>
+                    
+                    <div class="incident-levels">
+                        <div class="incident-level critical">
+                            <h4>🚨 Critical Incidents</h4>
+                            <p>Severe business impact requiring immediate response</p>
+                            <ul>
+                                <li>Complete system outages</li>
+                                <li>Data breaches affecting customers</li>
+                                <li>Financial system failures</li>
+                                <li>Regulatory violations</li>
+                            </ul>
+                            <div class="response-time">Response Time: 1 hour</div>
+                        </div>
+                        
+                        <div class="incident-level major">
+                            <h4>⚠️ Major Incidents</h4>
+                            <p>Significant business impact requiring prompt response</p>
+                            <ul>
+                                <li>Partial system failures</li>
+                                <li>Performance degradation</li>
+                                <li>Security incidents</li>
+                                <li>Data integrity issues</li>
+                            </ul>
+                            <div class="response-time">Response Time: 4 hours</div>
+                        </div>
+                        
+                        <div class="incident-level minor">
+                            <h4>ℹ️ Minor Incidents</h4>
+                            <p>Limited business impact with standard response</p>
+                            <ul>
+                                <li>Minor system issues</li>
+                                <li>Performance fluctuations</li>
+                                <li>User experience problems</li>
+                                <li>Documentation updates</li>
+                            </ul>
+                            <div class="response-time">Response Time: 24 hours</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resilience Testing Section -->
+            <section class="content-section">
+                <h2>🧪 Digital Resilience Testing</h2>
+                
+                <div class="resilience-testing">
+                    <h3>Testing Requirements & Procedures</h3>
+                    
+                    <div class="testing-types">
+                        <div class="test-type">
+                            <h4>🔒 Penetration Testing</h4>
+                            <p>Regular security assessments to identify vulnerabilities</p>
+                            <ul>
+                                <li>External network testing</li>
+                                <li>Internal security assessments</li>
+                                <li>Web application testing</li>
+                                <li>Social engineering tests</li>
+                            </ul>
+                            <div class="frequency">Frequency: Quarterly</div>
+                        </div>
+                        
+                        <div class="test-type">
+                            <h4>💾 Disaster Recovery Testing</h4>
+                            <p>Validate business continuity and recovery procedures</p>
+                            <ul>
+                                <li>Backup restoration tests</li>
+                                <li>System recovery procedures</li>
+                                <li>Data center failover</li>
+                                <li>Communication protocols</li>
+                            </ul>
+                            <div class="frequency">Frequency: Semi-annually</div>
+                        </div>
+                        
+                        <div class="test-type">
+                            <h4>📊 Load & Performance Testing</h4>
+                            <p>Ensure systems can handle expected and peak loads</p>
+                            <ul>
+                                <li>Stress testing</li>
+                                <li>Capacity planning</li>
+                                <li>Performance benchmarking</li>
+                                <li>Scalability validation</li>
+                            </ul>
+                            <div class="frequency">Frequency: Annually</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Third-Party Risk Section -->
+            <section class="content-section">
+                <h2>🤝 ICT Third-Party Risk</h2>
+                
+                <div class="third-party-risk">
+                    <h3>Vendor Risk Management</h3>
+                    
+                    <div class="risk-factors">
+                        <div class="risk-factor">
+                            <h4>📋 Vendor Assessment</h4>
+                            <ul>
+                                <li>Financial stability review</li>
+                                <li>Security posture evaluation</li>
+                                <li>Compliance history check</li>
+                                <li>Technical capability assessment</li>
+                                <li>Reference and reputation review</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="risk-factor">
+                            <h4>📝 Contract Management</h4>
+                            <ul>
+                                <li>Service level agreements (SLAs)</li>
+                                <li>Security requirements</li>
+                                <li>Compliance obligations</li>
+                                <li>Exit and transition plans</li>
+                                <li>Liability and indemnification</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="risk-factor">
+                            <h4>👀 Ongoing Monitoring</h4>
+                            <ul>
+                                <li>Performance metrics tracking</li>
+                                <li>Security incident monitoring</li>
+                                <li>Compliance status updates</li>
+                                <li>Regular vendor reviews</li>
+                                <li>Risk reassessment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation Examples Section -->
+            <section class="content-section">
+                <h2>💻 Implementation Examples</h2>
+                
+                <div class="examples-grid">
+                    <div class="example">
+                        <h3>✅ Good: Incident Response Framework</h3>
+                        <div class="code-block">
+                            <pre><code>// Incident classification system
+class IncidentClassifier {
+  classify(severity, impact, scope) {
+    if (severity === 'critical' && impact === 'high') {
+      return 'CRITICAL';
+    } else if (severity === 'major') {
+      return 'MAJOR';
+    }
+    return 'MINOR';
+  }
+}
+
+// Automated response triggers
+if (incident.level === 'CRITICAL') {
+  notifyEmergencyTeam();
+  activateIncidentResponse();
+  escalateToManagement();
+}</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="example">
+                        <h3>❌ Bad: Missing Incident Response</h3>
+                        <div class="code-block">
+                            <pre><code>// No incident classification
+function handleError(error) {
+  console.log('Error occurred:', error); // No classification!
+  // No response procedures
+  // No escalation
+  // No documentation
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compliance Checklist Section -->
+            <section class="content-section">
+                <h2>✅ DORA Compliance Checklist</h2>
+                
+                <div class="compliance-checklist">
+                    <div class="checklist-section">
+                        <h3>📋 Risk Management</h3>
+                        <ul>
+                            <li>✅ ICT risk assessment framework established</li>
+                            <li>✅ Risk mitigation strategies implemented</li>
+                            <li>✅ Regular risk reviews scheduled</li>
+                            <li>✅ Risk appetite defined and documented</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="checklist-section">
+                        <h3>🚨 Incident Response</h3>
+                        <ul>
+                            <li>✅ Incident response procedures documented</li>
+                            <li>✅ Incident classification system in place</li>
+                            <li>✅ Response time targets defined</li>
+                            <li>✅ Escalation procedures established</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="checklist-section">
+                        <h3>🧪 Resilience Testing</h3>
+                        <ul>
+                            <li>✅ Testing schedule established</li>
+                            <li>✅ Test procedures documented</li>
+                            <li>✅ Results tracking implemented</li>
+                            <li>✅ Remediation procedures in place</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="checklist-section">
+                        <h3>🤝 Third-Party Risk</h3>
+                        <ul>
+                            <li>✅ Vendor assessment procedures established</li>
+                            <li>✅ Contract requirements defined</li>
+                            <li>✅ Ongoing monitoring implemented</li>
+                            <li>✅ Exit strategies planned</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Steps Section -->
+            <section class="content-section">
+                <h2>🎯 Next Steps</h2>
+                
+                <div class="next-steps-grid">
+                    <a href="/docs/gdpr/" class="next-step-card">
+                        <h3>🔒 GDPR Compliance</h3>
+                        <p>Learn about data protection and privacy compliance</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    
+                    <a href="/docs/scan-monitor/" class="next-step-card">
+                        <h3>📊 Scanning & Monitoring</h3>
+                        <p>Set up continuous DORA compliance monitoring</p>
+                        <span class="arrow">→</span>
+                    </a>
+                    
+                    <a href="/docs/api/" class="next-step-card">
+                        <h3>🔌 API Integration</h3>
+                        <p>Integrate DORA scanning into your risk management workflow</p>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Product</h4>
+                    <a href="/docs/get-started/" class="footer-link">Get Started</a>
+                    <a href="/docs/scan-monitor/" class="footer-link">Scan & Monitor</a>
+                    <a href="/docs/api/" class="footer-link">API Reference</a>
+                    <a href="/docs/mcp/" class="footer-link">MCP Integration</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Business</h4>
+                    <a href="/docs/business-value/" class="footer-link">ROI Calculator</a>
+                    <a href="/docs/" class="footer-link">Case Studies</a>
+                    <a href="/docs/" class="footer-link">Pricing</a>
+                    <a href="/docs/" class="footer-link">Contact Sales</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Juro. All rights reserved. 
+                    <a href="/docs/">License</a> | 
+                    <a href="/docs/">Privacy</a> | 
+                    <a href="/docs/">Terms</a>
+                    Built with ❤️ by the Juro Team.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

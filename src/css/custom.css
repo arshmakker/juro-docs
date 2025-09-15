@@ -1,0 +1,286 @@
+/**
+ * Custom CSS for Juro Documentation
+ * Modern, clean design with compliance-focused branding
+ */
+
+/* CSS Variables for consistent theming */
+:root {
+  --juro-primary: #2563eb;
+  --juro-secondary: #7c3aed;
+  --juro-accent: #059669;
+  --juro-warning: #d97706;
+  --juro-error: #dc2626;
+  --juro-success: #16a34a;
+  --juro-gray-50: #f9fafb;
+  --juro-gray-100: #f3f4f6;
+  --juro-gray-200: #e5e7eb;
+  --juro-gray-300: #d1d5db;
+  --juro-gray-400: #9ca3af;
+  --juro-gray-500: #6b7280;
+  --juro-gray-600: #4b5563;
+  --juro-gray-700: #374151;
+  --juro-gray-800: #1f2937;
+  --juro-gray-900: #111827;
+}
+
+/* Hero Section */
+.hero-banner {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--juro-primary) 0%, var(--juro-secondary) 100%);
+  color: white;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Feature Grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: white;
+  border: 1px solid var(--juro-gray-200);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  color: var(--juro-primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Regulation Grid */
+.regulation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.regulation-card {
+  background: var(--juro-gray-50);
+  border: 1px solid var(--juro-gray-200);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.regulation-card h3 {
+  color: var(--juro-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+/* Integration Grid */
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.integration-card {
+  background: white;
+  border: 1px solid var(--juro-gray-200);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.integration-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.integration-card h3 {
+  color: var(--juro-primary);
+  margin-bottom: 1rem;
+}
+
+.integration-card a {
+  color: var(--juro-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.integration-card a:hover {
+  text-decoration: underline;
+}
+
+/* Success Stories */
+.success-stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.success-story {
+  background: var(--juro-gray-50);
+  border-left: 4px solid var(--juro-accent);
+  padding: 2rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.success-story h4 {
+  color: var(--juro-primary);
+  margin-bottom: 1rem;
+}
+
+.success-author {
+  color: var(--juro-gray-600);
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+/* CTA Grid */
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.cta-card {
+  background: white;
+  border: 2px solid var(--juro-gray-200);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cta-card:hover {
+  border-color: var(--juro-primary);
+  transform: translateY(-2px);
+}
+
+.cta-card h3 {
+  color: var(--juro-primary);
+  margin-bottom: 1rem;
+}
+
+/* Code Blocks */
+.prism-code {
+  border-radius: 0.5rem;
+  border: 1px solid var(--juro-gray-200);
+}
+
+/* Buttons */
+.button--primary {
+  background-color: var(--juro-primary);
+  border-color: var(--juro-primary);
+}
+
+.button--primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.button--secondary {
+  background-color: transparent;
+  border-color: var(--juro-primary);
+  color: var(--juro-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--juro-primary);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feature-grid,
+  .regulation-grid,
+  .integration-grid,
+  .success-stories,
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark Mode Support */
+[data-theme='dark'] .feature-card,
+[data-theme='dark'] .integration-card,
+[data-theme='dark'] .cta-card {
+  background: var(--juro-gray-800);
+  border-color: var(--juro-gray-700);
+}
+
+[data-theme='dark'] .regulation-card,
+[data-theme='dark'] .success-story {
+  background: var(--juro-gray-800);
+  border-color: var(--juro-gray-700);
+}
+
+/* Accessibility Improvements */
+.feature-card:focus,
+.integration-card:focus,
+.cta-card:focus {
+  outline: 2px solid var(--juro-primary);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .hero-banner {
+    background: none;
+    color: black;
+  }
+  
+  .feature-grid,
+  .regulation-grid,
+  .integration-grid,
+  .success-stories,
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+}
