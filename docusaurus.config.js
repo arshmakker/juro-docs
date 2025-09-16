@@ -51,6 +51,12 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
@@ -108,15 +114,15 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/getting-started',
+                to: '/docs/getting-started/installation',
               },
               {
                 label: 'Features',
-                to: '/docs/features',
+                to: '/docs/features/compliance-scanning',
               },
               {
-                label: 'Tutorials',
-                to: '/docs/tutorials',
+                label: 'Support',
+                to: '/docs/support/faq',
               },
             ],
           },
@@ -125,15 +131,15 @@ const config = {
             items: [
               {
                 label: 'GitHub Actions',
-                to: '/integrations/github-actions',
+                to: '/docs/integrations/github-actions',
               },
               {
                 label: 'CLI Tools',
-                to: '/integrations/cli-tools',
+                to: '/docs/integrations/cli-tools',
               },
               {
                 label: 'IDE Setup',
-                to: '/integrations/ide-setup',
+                to: '/docs/integrations/ide-setup',
               },
             ],
           },
@@ -142,15 +148,15 @@ const config = {
             items: [
               {
                 label: 'GDPR',
-                to: '/regulations/gdpr-compliance',
+                to: '/docs/regulations/gdpr-compliance',
               },
               {
                 label: 'SOC 2',
-                to: '/regulations/soc2-compliance',
+                to: '/docs/regulations/soc2-compliance',
               },
               {
                 label: 'OWASP',
-                to: '/regulations/owasp-security',
+                to: '/docs/regulations/owasp-security',
               },
             ],
           },

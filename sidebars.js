@@ -36,6 +36,24 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Integrations',
+      items: [
+        'integrations/github-actions',
+        'integrations/cli-tools',
+        'integrations/ide-setup',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Regulations',
+      items: [
+        'regulations/gdpr-compliance',
+        'regulations/soc2-compliance',
+        'regulations/owasp-security',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Support',
       items: [
         'support/faq',
