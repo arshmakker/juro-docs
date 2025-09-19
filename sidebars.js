@@ -26,14 +26,15 @@ const sidebars = {
         'getting-started/configuration',
       ],
     },
-    {
-      type: 'category',
-      label: 'Features',
-      items: [
-        'features/compliance-scanning',
-        'features/ai-analysis',
-      ],
-    },
+          {
+            type: 'category',
+            label: 'Features',
+            items: [
+              'features/compliance-scanning',
+              'features/ai-analysis',
+              'features/performance-optimization',
+            ],
+          },
     {
       type: 'category',
       label: 'Integrations',
@@ -52,13 +53,20 @@ const sidebars = {
         'regulations/owasp-security',
       ],
     },
-    {
-      type: 'category',
-      label: 'Support',
-      items: [
-        'support/faq',
-      ],
-    },
+          {
+            type: 'category',
+            label: 'Architecture',
+            items: [
+              'architecture/overview',
+            ],
+          },
+          {
+            type: 'category',
+            label: 'Support',
+            items: [
+              'support/faq',
+            ],
+          },
   ],
 
   // But you can create a sidebar manually
