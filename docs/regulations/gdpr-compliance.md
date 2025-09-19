@@ -6,7 +6,23 @@ sidebar_label: GDPR Compliance
 
 # GDPR Compliance
 
-Learn how to ensure your code meets GDPR (General Data Protection Regulation) requirements.
+Learn how to ensure your code meets GDPR (General Data Protection Regulation) requirements with Juro's comprehensive compliance scanning.
+
+## ✅ **Current Implementation Status**
+
+Juro v2.0.0 includes **4 comprehensive GDPR rules** that are fully implemented and actively scanning your code:
+
+### **Implemented Rules**
+1. **Personal Data Detection** - Identifies email, phone, SSN, credit card, bank account, passport, etc.
+2. **Consent Management** - Detects consent-related code and requirements
+3. **Data Retention** - Identifies data retention and cleanup logic
+4. **Data Export Rights** - Detects data portability and export functionality
+
+### **Coverage Details**
+- **Severity Levels**: HIGH, MEDIUM
+- **File Types**: All programming languages (.js, .ts, .py, .java, .cs, .php, .rb, .go, .rs, .swift, .kt)
+- **Context Patterns**: Advanced pattern matching for actual data vs. configuration
+- **Real-Time Scanning**: Available in VS Code extension with instant feedback
 
 ## Key Principles
 
@@ -82,14 +98,49 @@ class UserData {
 }
 ```
 
+## Juro GDPR Scanning
+
+### **Command Line Scanning**
+```bash
+# Scan for GDPR violations
+juro scan --path ./src --rules gdpr --format json
+
+# Scan with specific severity threshold
+juro scan --path ./src --rules gdpr --severity-threshold HIGH
+
+# Generate detailed report
+juro scan --path ./src --rules gdpr --format html --output gdpr-report.html
+```
+
+### **VS Code Extension**
+- **Real-Time Scanning**: Violations appear instantly as you type
+- **Inline Highlighting**: Visual indicators for GDPR violations
+- **Hover Tooltips**: Detailed information and fix suggestions
+- **Compliance Scoring**: Real-time GDPR compliance score
+
+### **GitHub Actions Integration**
+```yaml
+- name: GDPR Compliance Check
+  uses: juro/compliance-action@v1
+  with:
+    api-key: ${{ secrets.JURO_API_KEY }}
+    regulations: 'GDPR'
+    fail-on-critical: true
+    comment-on-violations: true
+```
+
 ## Compliance Checklist
 
+### **Automated Checks (Juro)**
+- [x] **Personal Data Detection** - Automatically scanned
+- [x] **Consent Management** - Automatically scanned  
+- [x] **Data Retention** - Automatically scanned
+- [x] **Data Export Rights** - Automatically scanned
+
+### **Manual Verification**
 - [ ] Data processing is lawful
 - [ ] Privacy notices are clear
-- [ ] Consent mechanisms are in place
 - [ ] Data security measures are adequate
-- [ ] Data subject rights are supported
-- [ ] Data retention policies are implemented
 - [ ] Regular compliance audits are conducted
 
 ## Resources
