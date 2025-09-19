@@ -6,13 +6,15 @@ sidebar_label: MCP Tools
 
 # MCP Tools
 
-Learn how to use Juro's Model Context Protocol (MCP) tools for AI-powered compliance analysis.
+Learn how to use Juro's Model Context Protocol (MCP) tools for AI-powered compliance analysis and GitHub Actions integration.
 
 ## Overview
 
-Juro provides a comprehensive set of MCP tools that allow AI assistants to interact with your codebase and perform compliance analysis. These tools enable natural language queries about your code's compliance status.
+Juro v2.0.0 provides a comprehensive set of MCP tools that allow AI assistants to interact with your codebase, perform compliance analysis, and manage GitHub Actions workflows. These tools enable natural language queries about your code's compliance status and automated CI/CD integration.
 
 ## Available Tools
+
+### Compliance Scanning Tools
 
 ### `scan_codebase`
 
@@ -120,6 +122,158 @@ juro ask "Does my authentication system comply with GDPR requirements?"
 juro ask "Are there any SQL injection vulnerabilities in my database queries?"
 ```
 
+### GitHub Actions Tools (v2.0.0)
+
+### `add_github_workflow`
+
+Adds a compliance workflow to your GitHub repository.
+
+```json
+{
+  "name": "add_github_workflow",
+  "description": "Add a compliance workflow to GitHub repository",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "repo_path": {
+        "type": "string",
+        "description": "Path to the local repository"
+      },
+      "workflow_config": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "trigger": {"type": "string", "enum": ["push", "pull_request", "schedule"]},
+          "regulations": {"type": "array", "items": {"type": "string"}},
+          "fail_on_violations": {"type": "boolean"},
+          "fail_on_critical": {"type": "boolean"},
+          "min_score": {"type": "number"}
+        }
+      }
+    },
+    "required": ["repo_path", "workflow_config"]
+  }
+}
+```
+
+**Example Usage:**
+```bash
+# Add GDPR compliance workflow
+juro add-workflow --repo ./my-project --config gdpr-workflow.json
+```
+
+### `create_pr_workflow`
+
+Creates a PR-specific compliance workflow with automatic commenting.
+
+```json
+{
+  "name": "create_pr_workflow",
+  "description": "Create a PR-specific compliance workflow",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "repo_path": {"type": "string"},
+      "pr_config": {
+        "type": "object",
+        "properties": {
+          "comment_on_violations": {"type": "boolean"},
+          "fail_on_critical": {"type": "boolean"},
+          "notify_channels": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "required": ["repo_path", "pr_config"]
+  }
+}
+```
+
+### `run_pr_compliance_check`
+
+Runs compliance check on a specific pull request.
+
+```json
+{
+  "name": "run_pr_compliance_check",
+  "description": "Run compliance check on a pull request",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "pr_data": {
+        "type": "object",
+        "properties": {
+          "number": {"type": "number"},
+          "base_branch": {"type": "string"},
+          "head_branch": {"type": "string"},
+          "changed_files": {"type": "array", "items": {"type": "string"}}
+        }
+      },
+      "options": {
+        "type": "object",
+        "properties": {
+          "regulations": {"type": "array", "items": {"type": "string"}},
+          "severity_threshold": {"type": "string", "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]}
+        }
+      }
+    },
+    "required": ["pr_data"]
+  }
+}
+```
+
+### `generate_compliance_report`
+
+Generates detailed compliance reports in multiple formats.
+
+```json
+{
+  "name": "generate_compliance_report",
+  "description": "Generate compliance report from scan results",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "scan_results": {"type": "object"},
+      "report_options": {
+        "type": "object",
+        "properties": {
+          "format": {"type": "string", "enum": ["markdown", "html", "json", "sarif"]},
+          "include_details": {"type": "boolean"},
+          "include_trends": {"type": "boolean"},
+          "group_by": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "required": ["scan_results"]
+  }
+}
+```
+
+### `send_compliance_notifications`
+
+Sends compliance notifications to team channels.
+
+```json
+{
+  "name": "send_compliance_notifications",
+  "description": "Send compliance notifications to team channels",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "compliance_data": {"type": "object"},
+      "notification_config": {
+        "type": "object",
+        "properties": {
+          "slack": {"type": "object", "properties": {"webhook": {"type": "string"}}},
+          "email": {"type": "object", "properties": {"recipients": {"type": "array", "items": {"type": "string"}}}},
+          "teams": {"type": "object", "properties": {"webhook": {"type": "string"}}}
+        }
+      }
+    },
+    "required": ["compliance_data", "notification_config"]
+  }
+}
+```
+
 ## Integration Examples
 
 ### With Claude Desktop
@@ -178,11 +332,20 @@ All MCP tools return structured error responses:
 
 ### Common Error Codes
 
+#### Compliance Scanning Errors
 - `INVALID_PATH` - The specified path does not exist
 - `INVALID_RULES` - One or more specified rules are not supported
 - `API_KEY_MISSING` - API key is not configured
 - `RATE_LIMIT_EXCEEDED` - Too many requests in a short time
 - `SCAN_FAILED` - The scan operation failed
+
+#### GitHub Actions Errors (v2.0.0)
+- `GITHUB_TOKEN_MISSING` - GitHub token is not configured
+- `REPO_NOT_FOUND` - Repository not found or inaccessible
+- `WORKFLOW_CREATION_FAILED` - Failed to create GitHub workflow
+- `PR_CHECK_FAILED` - Pull request compliance check failed
+- `NOTIFICATION_FAILED` - Failed to send team notifications
+- `REPORT_GENERATION_FAILED` - Failed to generate compliance report
 
 ## Best Practices
 
