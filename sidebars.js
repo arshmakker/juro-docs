@@ -57,7 +57,7 @@ const sidebars = {
             type: 'category',
             label: 'Architecture',
             items: [
-              'architecture/overview',
+              'architecture/architecture-overview',
             ],
           },
           {
